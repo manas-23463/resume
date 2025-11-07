@@ -21,9 +21,10 @@ import asyncio
 # Load environment variables first
 load_dotenv()
 
+
 # Firebase service is required for authentication
 try:
-    from firebase_service import firebase_service
+    from backend.firebase_service import firebase_service
     FIREBASE_AVAILABLE = True
 except Exception as e:
     print(f"Firebase service not available: {e}")
@@ -31,11 +32,12 @@ except Exception as e:
 
 # S3 service for resume storage
 try:
-    from s3_service import s3_service
+    from backend.s3_service import s3_service
     S3_AVAILABLE = True
 except Exception as e:
     print(f"S3 service not available: {e}")
     S3_AVAILABLE = False
+
 
 # Async GPT service for parallel processing
 try:
