@@ -57,6 +57,7 @@ app.add_middleware(
         "https://resume-screener-mu.vercel.app",  # Your frontend domain
         "https://resume-screener-tgk6.vercel.app",  # Your frontend domain
         "https://*.vercel.app",  # Allow all Vercel domains
+        "https://resume-one-blue.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
